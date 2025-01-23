@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    
+    <!-- Form for updating student data -->
+    <div class="container" >
+        <form action="/edit/<%= student._id %>" method="POST">
+            <h4>Edit Student</h4>
+            <div>
+                <label for="rollNo">Roll Number:</label>
+                <input type="text" class="form-control" name="rollNo" id="rollNo" value="<%= student.rollNo %>" required><br><br>
+            </div>
+            
+            <div>
+                <label for="Name">Name:</label>
+                <input type="text" class="form-control" name="Name" id="Name" value="<%= student.Name %>" required><br><br>
+            </div>
+            
+            <div>
+                <label for="degree">Degree:</label>
+                <input type="text" class="form-control" name="degree" id="degree" value="<%= student.degree %>" required><br><br>
+            </div>
+            
+            <div>
+                <label for="city">City:</label>
+                <input type="text" class="form-control" name="city" id="city" value="<%= student.city %>" required><br><br>
+            </div>
+            
+            <button class="btn btn-success" type="submit">Update</button>
+        </form>
+    </div>
+</body>
+</html>
